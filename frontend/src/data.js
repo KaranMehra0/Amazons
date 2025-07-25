@@ -25,22 +25,10 @@ const data = {
             description: 'high quality pants'
         },
         {
-            name: 'addidas size shirt',
-            slug: 'addidas size shirt',
-            catagory: 'shirts',
-            image: '/image/p3.webp',
-            price: 65,
-            countInStock: 10,
-            brand: 'addidas',
-            rating: 0,
-            numReviews: 11,
-            description: 'high quality shirt'
-        },
-        {
             name: 'addidas size pants',
             slug: 'addidas size pants',
             catagory: 'pants',
-            image: '/image/p4.webp',
+            image: '/image/p3.webp',
             price: 22,
             countInStock: 9,
             brand: 'addidas',
@@ -48,6 +36,19 @@ const data = {
             numReviews: 10,
             description: 'high quality pants'
         },
+        {
+            name: 'addidas size shirt',
+            slug: 'addidas size shirt',
+            catagory: 'shirts',
+            image: '/image/p4.webp',
+            price: 65,
+            countInStock: 10,
+            brand: 'addidas',
+            rating: 0,
+            numReviews: 11,
+            description: 'high quality shirt'
+        },
+
     ],
 };
 export default data;
