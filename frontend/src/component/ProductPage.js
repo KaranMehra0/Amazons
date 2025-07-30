@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 
-function Product() {
+function ProductPage() {
     const param = useParams();
     const { slug } = param;
     return (
@@ -10,4 +10,4 @@ function Product() {
     )
 }
 
-export default Product;
+export default ProductPage;

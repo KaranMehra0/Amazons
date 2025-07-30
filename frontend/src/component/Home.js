@@ -1,7 +1,10 @@
-import { Link } from 'react-router-dom';
-import axios from 'axios'
+import axios from 'axios';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+
 // import data from '../data'
-import { useEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer } from 'react';
+import Products from './Products';
 
 
 
@@ -52,32 +55,19 @@ function Home() {
 
     }, [])
 
-    return (
-        <>
-            <h1>Featured Product</h1>
-            <div className='products'>
-                {
-                    loading ? (<div>Loading...</div>)
-                        :
-                        error ? (<div>{error}</div>)
-                            : (
-                                product.map(product => (
-                                    <div className='product' key={product.slug}>
-
-                                        <Link to={`/product/${product.slug}`}>
-                                            <img src={product.image} alt={product.name} />
-                                        </Link>
-
-                                        <div className='product-info'>
-                                            <Link to={`/product/${product.slug}`}>
-                                                <p>{product.name}</p>
-                                            </Link>
-                                            <p><strong>${product.price}</strong></p>
-                                            <button>Add to cart</button>
-                                        </div>
-                                    </div>
-                                )))}</div>
-        </>
-    )
+    return (<>
+        <h1>Featured Product</h1>
+        <div className='products'>
+            {loading ? (<div>Loading...</div>)
+                : error ? (<div>{error}</div>) : (
+                    <Row>
+                        {product.map(product => (
+                            <Col key={product.slug} sm={6} md={4} lg={3} className='mb-3'>
+                                <Products product={product}></Products>
+                            </Col>
+                        ))}
+                    </Row>
+                )}</div>
+    </>)
 }
 export default Home;
