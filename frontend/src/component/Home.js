@@ -6,6 +6,8 @@ import Col from 'react-bootstrap/Col';
 import { useEffect, useReducer } from 'react';
 import Products from './Products';
 import { Helmet } from 'react-helmet-async';
+import LoadingBox from './LoadingBox';
+import MessageBox from './MessageBox';
 
 
 
@@ -62,16 +64,19 @@ function Home() {
     </Helmet>
         <h1>Featured Product</h1>
         <div className='products'>
-            {loading ? (<div>Loading...</div>)
-                : error ? (<div>{error}</div>) : (
-                    <Row>
-                        {product.map(product => (
-                            <Col key={product.slug} sm={6} md={4} lg={3} className='mb-3'>
-                                <Products product={product}></Products>
-                            </Col>
-                        ))}
-                    </Row>
-                )}</div>
+            {loading ? (
+                <LoadingBox/>
+        ): error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+        ) : (
+            <Row>
+            {product.map(product => (
+                <Col key={product.slug} sm={6} md={4} lg={3} className='mb-3'>
+                <Products product={product}></Products>
+                </Col>
+                ))}
+                </Row>
+            )}</div>
     </>)
 }
 export default Home;

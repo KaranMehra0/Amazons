@@ -10,6 +10,9 @@ import { useParams } from "react-router-dom";
 import Rating from "./Rating";
 import Button from "react-bootstrap/esm/Button";
 import { Helmet } from "react-helmet-async";
+import LoadingBox from "./LoadingBox";
+import MessageBox from "./MessageBox";
+import { getError } from "../utils";
 
 
 
@@ -45,7 +48,7 @@ const [{ loading, error, product }, dispatch] = useReducer(reducer, {
                 const result = await axios.get(`/api/product/slug/${slug}`);
                 dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
             } catch (err) {
-                dispatch({ type: 'FETCH_FAIL', payload: err.message });
+                dispatch({ type: 'FETCH_FAIL', payload: getError(err)});
             }
             // setProduct(result.data)
         }
@@ -68,9 +71,11 @@ const [{ loading, error, product }, dispatch] = useReducer(reducer, {
 
     return (
         
-loading? (<div>Loading....</div>)
-:error?(<div>{error}</div>):
-(<div>
+loading ? (
+                <LoadingBox/>
+        ): error ? (
+            <MessageBox variant="danger">{error}</MessageBox>
+        ):(<div>
     <Row>
         
         <Col md={6}>
