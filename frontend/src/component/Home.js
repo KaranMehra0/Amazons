@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 // import data from '../data'
 import { useEffect, useReducer } from 'react';
 import Products from './Products';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -56,6 +57,9 @@ function Home() {
     }, [])
 
     return (<>
+    <Helmet>
+        <title>Amazons</title>
+    </Helmet>
         <h1>Featured Product</h1>
         <div className='products'>
             {loading ? (<div>Loading...</div>)

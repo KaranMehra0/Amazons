@@ -20,7 +20,7 @@ function App() {
           {/* <Link to='/'>Amazons</Link> */}
         </header>
         <main>
-          <Container>
+          <Container className='mt-3'>
             <Routes>
               <Route path={'/'} element={<Home />} />
               <Route path={'/Product/:slug'} element={<ProductPage />} />
