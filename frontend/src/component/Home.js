@@ -38,7 +38,7 @@ const loggerReducer = reducerLogger(reducer);
 
 function Home() {
     const [{ loading, error, product }, dispatch] = useReducer(loggerReducer, {
-        product: [],
+        product:{},
         loading: true,
         error: '',
     })
