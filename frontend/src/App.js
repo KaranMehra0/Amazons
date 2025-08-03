@@ -8,6 +8,7 @@ import ProductPage from './component/ProductPage';
 import Badge from 'react-bootstrap/esm/Badge';
 import { useContext } from 'react';
 import { Store } from './Store';
+import CartPage from './component/CartPage';
 
 function App() {
   const {state}=useContext(Store);
@@ -26,7 +27,7 @@ const {cart}=state;
               Cart
               {cart.cartItems.length > 0 && (
                 <Badge pill bg="danger">
-                {cart.cartItems.length}
+                {cart.cartItems.reduce((a, c) => a+ c.quantity, 0 )}
                 </Badge>
               )}
               </Link>
@@ -38,8 +39,9 @@ const {cart}=state;
         <main>
           <Container className='mt-3'>
             <Routes>
-              <Route path={'/'} element={<Home />} />
               <Route path={'/Product/:slug'} element={<ProductPage />} />
+              <Route path={'/cart'} element={<CartPage />} />
+              <Route path={'/'} element={<Home />} />
             </Routes>
           </Container>
         </main>
