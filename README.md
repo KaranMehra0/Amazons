@@ -81,3 +81,22 @@
 1. create 2 columns
 2. display items list
 3. create action column
+
+# Complete Cart Page
+
+1. Click handler for Increase/Decrease item
+2. Click handler for remove item
+3. Click handler for checkout
+
+# Create Sign in Page
+
+1. Create sign in form
+2. add email and password
+3. add sign in button
+
+# Connect To MongoDB Database
+
+1. create atlas MongoDB database
+2. install local MongoDB database
+3. npm install Mongoose
+4. connect to MongoDB database

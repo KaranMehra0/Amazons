@@ -7,7 +7,7 @@ const data = {
             catagory: 'shirts',
             image: '/image/p1.webp',
             price: 120,
-            countInStock: 0,
+            countInStock: 5,
             brand: 'Nike',
             rating: 4.8,
             numReviews: 10,

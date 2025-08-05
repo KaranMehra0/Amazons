@@ -4,14 +4,24 @@ import { Link } from 'react-router-dom';
 import Rating from './Rating';
 import { useContext } from 'react';
 import { Store } from '../Store';
+import axios from 'axios';
 
 
 function Products(props) {
     const { product } = props;
-// const {state, dispatch: ctxDispatch}=useContext(Store);
-// const addToCartHandler=()=>{
-// ctxDispatch({type:'CART_ADD_ITEM',payload:{...product, quantity:1}})
-// }
+    const {state, dispatch:ctxDispatch }= useContext(Store);
+const { cart:{cartItems}, } = state;
+
+const addToCartHandler = async(item) => {
+    const existItem = cartItems.find((i)=>i._id===product._id);
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+const {data} = await axios.get(`/api/Product/${item._id}`);
+if(data.countInStock < quantity){
+    window.alert('sorry, Product is out of stock');
+    return;
+}
+ctxDispatch({type:'CART_ADD_ITEM',payload:{...item, quantity},});
+}
     return (
         <Card> 
             <Link to={`/product/${product.slug}`}>
@@ -25,7 +35,11 @@ function Products(props) {
                 </Link>
                 <Rating rating={product.rating} numReviews={product.numReviews}></Rating>
                 <Card.Text>${product.price}</Card.Text>
-                <Button >Add to cart</Button>
+                {product.countInStock === 0 
+                ? ( <Button variant='light' disabled>Out of Stock</Button>)
+                :(
+                <Button onClick={() => addToCartHandler(product)}>Add to cart</Button>)}
+                
             </Card.Body>
         </Card>
     )
