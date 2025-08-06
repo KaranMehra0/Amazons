@@ -6,7 +6,7 @@ import Badge from "react-bootstrap/esm/Badge";
 
 import Row from "react-bootstrap/esm/Row";
 import ListGroup from "react-bootstrap/esm/ListGroup";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Rating from "./Rating";
 import Button from "react-bootstrap/esm/Button";
 import { Helmet } from "react-helmet-async";

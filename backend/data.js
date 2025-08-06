@@ -1,10 +1,9 @@
 const data = {
     product: [
         {
-            _id: '1',
             name: 'nike size shirt',
             slug: 'nike size shirt',
-            catagory: 'shirts',
+            category: 'shirts',
             image: '/image/p1.webp',
             price: 120,
             countInStock: 5,
@@ -13,11 +12,10 @@ const data = {
             numReviews: 10,
             description: 'high quality shirt'
         },
-        {
-            _id: '2',
+        {            
             name: 'nike size pants',
             slug: 'nike size pants',
-            catagory: 'pants',
+            category: 'pants',
             image: '/image/p2.webp',
             price: 25,
             countInStock: 0,
@@ -26,11 +24,10 @@ const data = {
             numReviews: 0,
             description: 'high quality pants'
         },
-        {
-            _id: '3',
+        {        
             name: 'addidas size pants',
             slug: 'addidas size pants',
-            catagory: 'pants',
+            category: 'pants',
             image: '/image/p3.webp',
             price: 22,
             countInStock: 9,
@@ -39,11 +36,10 @@ const data = {
             numReviews: 10,
             description: 'high quality pants'
         },
-        {
-            _id: '4',
+        {            
             name: 'addidas size shirt',
             slug: 'addidas size shirt',
-            catagory: 'shirts',
+            category: 'shirts',
             image: '/image/p4.webp',
             price: 65,
             countInStock: 10,
