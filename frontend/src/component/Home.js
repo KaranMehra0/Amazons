@@ -62,7 +62,7 @@ function Home() {
     <Helmet>
         <title>Amazons</title>
     </Helmet>
-        <h1>Featured Product</h1>
+        <h1>Featured Products</h1>
         <div className='products'>
             {loading ? (
                 <LoadingBox/>

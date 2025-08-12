@@ -7,6 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* header {
+  background-color: #404040;
+  padding: 1rem;
+}
+
+header>a {
+  color: #ffffff;
+  font: bold;
+  text-decoration: none;
+} */
 
 .site-container {
   min-height: 100vh;
@@ -32,11 +42,11 @@ main {
 }
 
 .product {
-  border: 1px solid;
+  border: 5px #404040 solid;
   margin: 1rem
 }
 
-.product>img {
+.product img {
   width: 100%;
   max-width: 480px;
 }
@@ -55,4 +65,12 @@ main {
 
 .small-container{
   max-width: 600px;
+}
+
+.card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+  transform: scale(1.05);
 }

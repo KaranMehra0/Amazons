@@ -25,7 +25,7 @@ ctxDispatch({type:'CART_ADD_ITEM',payload:{...item, quantity},});
     return (
         <Card> 
             <Link to={`/product/${product.slug}`}>
-                <img src={product.image} className='card-img-top' alt={product.name} />
+                <img src={product.image} className='card-img-top' alt={product.name}  />
             </Link>
             
 

@@ -29,17 +29,17 @@ ctxDispatch({type:'CART_REMOVE_ITEM',payload: item,});
 }
 
 const buyHandler=()=>{
-navigator('/signin?redirect/shipping');
+navigator('/signin?redirect=/shipping');
 }
 
 return (
     <div>
         <Helmet>
             <title>
-                Your Shoping Cart
+                Cart
             </title>
         </Helmet>
-        <h1>Your Shoping Cart</h1>
+        <h1>Your Shopping Cart</h1>
         <Row>
         <Col md={8}>
         {cartItems.length === 0 ? (

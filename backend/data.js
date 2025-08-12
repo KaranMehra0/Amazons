@@ -1,4 +1,20 @@
+import bcrypt from 'bcryptjs'
+
 const data = {
+    users:[
+        {
+            name:'Karan',
+            email:'admin@example.com',
+            password: bcrypt.hashSync('223330'),
+            isAdmin: true
+        },
+        {
+            name:'Amazons',
+            email:'user@example.com',
+            password: bcrypt.hashSync('223330'),
+            isAdmin: false
+        }
+    ],
     product: [
         {
             name: 'nike size shirt',
@@ -8,7 +24,7 @@ const data = {
             price: 120,
             countInStock: 5,
             brand: 'Nike',
-            rating: 4.8,
+            rating: 1.5,
             numReviews: 10,
             description: 'high quality shirt'
         },
@@ -18,32 +34,32 @@ const data = {
             category: 'pants',
             image: '/image/p2.webp',
             price: 25,
-            countInStock: 0,
+            countInStock: 10,
             brand: 'Nike',
-            rating: 4.5,
+            rating: 3.0,
             numReviews: 0,
             description: 'high quality pants'
         },
         {        
-            name: 'addidas size pants',
-            slug: 'addidas size pants',
+            name: 'adidas size pants',
+            slug: 'adidas size pants',
             category: 'pants',
-            image: '/image/p3.webp',
+            image: '/image/p2.webp',
             price: 22,
             countInStock: 9,
-            brand: 'addidas',
-            rating: 3.5,
+            brand: 'adidas',
+            rating: 5.0,
             numReviews: 10,
             description: 'high quality pants'
         },
         {            
-            name: 'addidas size shirt',
-            slug: 'addidas size shirt',
+            name: 'adidas size shirt',
+            slug: 'adidas size shirt',
             category: 'shirts',
             image: '/image/p4.webp',
             price: 65,
             countInStock: 10,
-            brand: 'addidas',
+            brand: 'adidas',
             rating: 0,
             numReviews: 11,
             description: 'high quality shirt'
