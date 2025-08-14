@@ -97,6 +97,7 @@ loading ? (
     <Row>
         
         <Col md={6}>
+        {console.log(product)}
         <img className="img-large"
         src={product.image} alt={product.name}></img>
         </Col>

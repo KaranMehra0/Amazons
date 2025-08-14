@@ -5,9 +5,9 @@ import Form from 'react-bootstrap/Form';
 import { Helmet } from 'react-helmet-async';
 import { Link, useLocation, useNavigate} from 'react-router-dom';
 import { useContext, useEffect, useState } from 'react';
-import { Store } from './Store';
+import { Store } from '../Store';
 import { toast } from 'react-toastify';
-import { getError } from './utils';
+import { getError } from '../utils';
 
 
 export default function SignInPage() {
