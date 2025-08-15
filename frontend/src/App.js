@@ -15,6 +15,7 @@ import CartPage from './component/CartPage';
 import SignInPage from './component/SignInPage'
 import ShippingAddressPage from './component/ShippingAddressPage';
 import SignUpPage from './component/SignUpPage'
+import PaymentMethodPage from './component/PaymentMethodPage';
 
 
 
@@ -26,6 +27,7 @@ const signoutHandler = () => {
     ctxDispatch({type : 'USER_SIGNOUT'});
     localStorage.removeItem('userInfo');
     localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
 
 }
   return (
@@ -81,8 +83,8 @@ const signoutHandler = () => {
               <Route path={'/cart'} element={<CartPage />} />
               <Route path={'/signin'} element={<SignInPage />} />
               <Route path={'/signup'} element={<SignUpPage />} />
-
               <Route path={'/shipping'} element={<ShippingAddressPage />} />
+              <Route path={'/payment'} element={<PaymentMethodPage />} />
               <Route path={'/'} element={<Home />} />
 
             </Routes>
