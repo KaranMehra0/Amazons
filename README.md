@@ -143,3 +143,14 @@
 
 1. create input forms
 2. handle submit
+
+# Create Place Order Page
+
+1. show cart items, payment and address
+2. handle place order action
+3. create order create api
+
+# implement Place Order Action
+
+1. handle place order action
+2. create order create api

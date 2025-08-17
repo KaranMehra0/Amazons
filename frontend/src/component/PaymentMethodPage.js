@@ -59,8 +59,8 @@ export default function PaymentMethodPage() {
         type="radio"
         id="GooglePay"
         label="Google Pay"
-        value="GooglePay"
-        checked={paymentMethodName === "GooglePay"}
+        value="Google Pay"
+        checked={paymentMethodName === "Google Pay"}
         onChange={(e) => setPaymentMethodName(e.target.value)}
         />
     </div>

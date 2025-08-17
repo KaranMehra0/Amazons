@@ -99,7 +99,7 @@ return (
                     <ListGroup variant="flush">
 <ListGroup.Item>
     <h3>
-        subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{''}
+        subtotal ({cartItems.reduce((a, c) => a + c.quantity, 0)}{' '}
         items) : $  
         {cartItems.reduce((a, c) => a + c.price * c.quantity, 0)}
     </h3>
