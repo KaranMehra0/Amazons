@@ -122,12 +122,12 @@ const [{loading}, dispatch] = useReducer(reducer,{
              {cart.cartItems.map((item)=>(
                <ListGroup.Item key={item._id}>
                 <Row className="align-items-center">
-                  <Col md={8} sm={6} xs={8} className="border">
+                  <Col md={8} sm={6} xs={8} >
                   <img src={item.image} alt={item.name} className="img-fluid rounded img-thumbnail"></img>{' '}
                   <Link to={`/product/${item.slug}`}>{item.name}</Link>
                   </Col>
                   <Col md={2} sm={3} xs={2}><span>{item.quantity}</span></Col>
-                  <Col md={2} sm={3} xs={2} className="border">${item.price}</Col>
+                  <Col md={2} sm={3} xs={2}>${item.price}</Col>
                 </Row>
                </ListGroup.Item>
              ))}

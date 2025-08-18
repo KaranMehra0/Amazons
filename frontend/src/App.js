@@ -17,6 +17,7 @@ import ShippingAddressPage from './component/ShippingAddressPage';
 import SignUpPage from './component/SignUpPage'
 import PaymentMethodPage from './component/PaymentMethodPage';
 import PlaceOrderPage from './component/PlaceOrderPage';
+import OrderPage from './component/OrderPage';
 
 
 
@@ -87,6 +88,7 @@ const signoutHandler = () => {
               <Route path={'/shipping'} element={<ShippingAddressPage />} />
               <Route path={'/payment'} element={<PaymentMethodPage />} />
               <Route path={'/placeorder'} element={<PlaceOrderPage />} />
+              <Route path={'/order/:id'} element={<OrderPage />} />
               <Route path={'/'} element={<Home />} />
 
             </Routes>
