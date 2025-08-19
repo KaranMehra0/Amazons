@@ -15,13 +15,13 @@ const data = {
             isAdmin: false
         }
     ],
-    product: [
+    products: [
         {
             name: 'nike size shirt',
             slug: 'nike size shirt',
             category: 'shirts',
             image: '/image/p1.webp',
-            price: 120,
+            price: 20,
             countInStock: 5,
             brand: 'Nike',
             rating: 1.5,

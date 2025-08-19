@@ -26,7 +26,7 @@ const reducer = (state, action) => {
         case 'FETCH_REQUEST':
             return { ...state, loading: true };
         case 'FETCH_SUCCESS':
-            return { ...state, product: action.payload, loading: false };
+            return { ...state, products: action.payload, loading: false };
         case 'FETCH_FAIL':
             return { ...state, loading: false, error: action.payload };
         default:
@@ -37,8 +37,8 @@ const reducer = (state, action) => {
 const loggerReducer = reducerLogger(reducer);
 
 function Home() {
-    const [{ loading, error, product }, dispatch] = useReducer(loggerReducer, {
-        product:{},
+    const [{ loading, error, products }, dispatch] = useReducer(loggerReducer, {
+        products:{},
         loading: true,
         error: '',
     })
@@ -70,7 +70,7 @@ function Home() {
             <MessageBox variant="danger">{error}</MessageBox>
         ) : (
             <Row>
-            {product.map(product => (
+            {products.map(product => (
                 <Col key={product.slug} sm={6} md={4} lg={3} className='mb-3'>
                 <Products product={product}></Products>
                 </Col>
